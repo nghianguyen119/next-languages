@@ -1,0 +1,6 @@
+{
+  "typescript": true,
+  "dimensions": false,
+  "outDir": "src/flags",
+  "filenameCase": "kebab"
+}

@@ -13,6 +13,7 @@
       "cache": false,
       "persistent": true
     },
-    "post-process-svg": {}
+    "post-process-svg": {},
+    "svg-to-tsx": {}
   }
 }

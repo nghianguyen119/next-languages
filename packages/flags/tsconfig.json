@@ -32,6 +32,6 @@
     "noImplicitReturns": true,
     "types": ["node"]
   },
-  "include": ["src", "*.tsx", "*.ts", "scripts"],
+  "include": ["src", "*.tsx", "*.ts"],
   "exclude": ["coverage", "config", "dist", "node_modules/**"]
 }
