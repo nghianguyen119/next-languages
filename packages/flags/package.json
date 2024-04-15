@@ -17,14 +17,22 @@
         "types": "./dist/esm/types/index.d.ts",
         "default": "./dist/esm/index.js"
       },
-      "require": "./dist/cjs/index.js"
+      "require": {
+        "default": "./dist/cjs/index.js"
+      }
     },
-    "./*": {
+    "./*.js": {
       "import": {
         "types": "./dist/esm/types/flags/*.d.ts",
-        "default": "./dist/esm/packages/flags/src/flags/*.js"
+        "default": "./dist/esm/flags/*.js"
       },
-      "require": "./dist/cjs/flags/*.js"
+      "require": {
+        "default": "./dist/cjs/flags/*.js"
+      }
+    },
+    "./style.css": {
+      "import": "./dist/esm/style.css",
+      "require": "./dist/cjs/style.css"
     }
   },
   "type": "module",
@@ -33,20 +41,15 @@
   },
   "scripts": {
     "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
+    "build": "rimraf dist && rollup --config",
     "test": "echo 'Add test script here'",
     "lint": "echo 'Add lint script here'",
     "post-process-svg": "tsx ./scripts/post-process-svg.ts",
-    "svg-to-tsx": "svgr assets/flags --config-file .svgrrc",
-    "rollup": "rimraf dist && rollup --config"
-  },
-  "dependencies": {
-    "@next-languages/eslint-config": "workspace:*",
-    "@next-languages/typescript-config": "workspace:*",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "svg-to-tsx": "svgr assets/flags --config-file .svgrrc"
   },
   "devDependencies": {
+    "@next-languages/eslint-config": "workspace:*",
+    "@next-languages/typescript-config": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
@@ -57,10 +60,13 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "cheerio": "1.0.0-rc.12",
-    "clsx": "^2.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "~2.1.0",
     "eslint": "^8.57.0",
     "node-sass": "^9.0.0",
     "postcss-scss": "^4.0.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.14.2",
     "rollup-plugin-dts": "^6.1.0",

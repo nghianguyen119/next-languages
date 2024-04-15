@@ -138,20 +138,13 @@ importers:
         version: 5.3.3
 
   packages/flags:
-    dependencies:
+    devDependencies:
       '@next-languages/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
       '@next-languages/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
       '@rollup/plugin-commonjs':
         specifier: ^25.0.7
         version: 25.0.7(rollup@4.14.2)
@@ -182,8 +175,11 @@ importers:
       cheerio:
         specifier: 1.0.0-rc.12
         version: 1.0.0-rc.12
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
       clsx:
-        specifier: ^2.1.0
+        specifier: ~2.1.0
         version: 2.1.0
       eslint:
         specifier: ^8.57.0
@@ -194,6 +190,12 @@ importers:
       postcss-scss:
         specifier: ^4.0.9
         version: 4.0.9(postcss@8.4.31)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
       rimraf:
         specifier: ^5.0.5
         version: 5.0.5
@@ -4216,6 +4218,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /class-variance-authority@0.7.0:
+    resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
+    dependencies:
+      clsx: 2.0.0
+    dev: true
+
   /clean-regexp@1.0.0:
     resolution: {integrity: sha512-GfisEZEJvzKrmGWkvfhgzcz/BllN1USeqD2V6tg14OAOgaCD2Z/PUEuxnAZ/nPvmaHRG7a8y77p1T/IRQ4D1Hw==}
     engines: {node: '>=4'}
@@ -4261,6 +4269,11 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: true
+
+  /clsx@2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
     dev: true
 
   /clsx@2.1.0:

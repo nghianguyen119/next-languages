@@ -1,1 +1,1 @@
-export * from "./flags";
+export * from "./components/flags";

@@ -20,12 +20,16 @@ export default [
         format: "es",
         exports: "named",
         sourcemap: false,
+        preserveModules: true,
+        preserveModulesRoot: "src", // LEARN: preserve the directory structure, without creating packages/flags/src/flags
       },
     ],
     plugins: [
       postcss({
         plugins: [],
         minimize: true,
+        extract: "style.css",
+        modules: false, // LEARN: set to true will create the css with random name while the css in the component is original name?
       }),
       external({ includeDependencies: true }),
       resolve(),
@@ -51,12 +55,16 @@ export default [
         format: "cjs",
         exports: "named",
         sourcemap: false,
+        preserveModules: true,
+        preserveModulesRoot: "src",
       },
     ],
     plugins: [
       postcss({
         plugins: [],
         minimize: true,
+        extract: "style.css",
+        modules: true,
       }),
       external({ includeDependencies: true }),
       resolve(),
@@ -73,5 +81,11 @@ export default [
       url(),
       terser(),
     ],
+  },
+  {
+    input: "dist/esm/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    external: [/\.(sc|sa|c)ss$/],
+    plugins: [dts()],
   },
 ];

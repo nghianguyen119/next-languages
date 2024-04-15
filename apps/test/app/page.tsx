@@ -3,8 +3,7 @@ import { Card } from "@next-languages/ui/card";
 import { Code } from "@next-languages/ui/code";
 import styles from "./page.module.css";
 import { Button } from "@next-languages/ui/button";
-import { Gb } from "@next-languages/flags";
-import { ButtonY } from "./buttonY";
+import { Gb, Fr } from "@next-languages/flags";
 
 function Gradient({
   conic,
@@ -64,8 +63,8 @@ export default function Page(): JSX.Element {
         <div style={{ width: "50px", height: "50px" }}>
           <Gb />
         </div>
-        <ButtonY />
-        <Gb />
+
+        <Fr size="3xs" />
 
         <div>
           <a
