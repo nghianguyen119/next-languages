@@ -1,1 +1,0 @@
-# `@next-languages/rollup-boilerplate`
