@@ -3,6 +3,8 @@ import { Card } from "@next-languages/ui/card";
 import { Code } from "@next-languages/ui/code";
 import styles from "./page.module.css";
 import { Button } from "@next-languages/ui/button";
+import { Gb } from "@next-languages/flags";
+import { ButtonY } from "./buttonY";
 
 function Gradient({
   conic,
@@ -59,6 +61,12 @@ export default function Page(): JSX.Element {
           examples/basic&nbsp;
           <Code className={styles.code}>web</Code>
         </p>
+        <div style={{ width: "50px", height: "50px" }}>
+          <Gb />
+        </div>
+        <ButtonY />
+        <Gb />
+
         <div>
           <a
             href="https://vercel.com?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"

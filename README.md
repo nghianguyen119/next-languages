@@ -24,3 +24,10 @@ If you're interested in contributing to the development of Next Languages, pleas
 ## License
 
 Next Languages is licensed under the [MIT License](LICENSE).
+
+## Special Thanks
+
+We would like to extend our special thanks to the following:
+
+- [MUI/icons-material](https://mui.com/components/material-icons/): We used this library as a standard to organize our project.
+- [Flagpack](https://www.flagpack.xyz/): They provided the base for us to develop our flag collection.
