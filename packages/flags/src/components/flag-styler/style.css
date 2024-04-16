@@ -1,71 +1,71 @@
 .next-languages--size-5xs {
   width: 1rem;
-  height: 0.75rem;
+  /* height: 0.75rem; */
 }
 
 .next-languages--size-4xs {
   width: 1.5rem;
-  height: 1.125rem;
+  /* height: 1.125rem; */
 }
 
 .next-languages--size-3xs {
   width: 2rem;
-  height: 1.5rem;
+  /* height: 1.5rem; */
 }
 
 .next-languages--size-2xs {
   width: 3rem;
-  height: 2.25rem;
+  /* height: 2.25rem; */
 }
 
 .next-languages--size-xs {
   width: 4rem;
-  height: 3rem;
+  /* height: 3rem; */
 }
 
 .next-languages--size-sm {
   width: 6rem;
-  height: 4.5rem;
+  /* height: 4.5rem; */
 }
 
 .next-languages--size-md {
   width: 8rem;
-  height: 6rem;
+  /* height: 6rem; */
 }
 
 .next-languages--size-lg {
   width: 12rem;
-  height: 9rem;
+  /* height: 9rem; */
 }
 
 .next-languages--size-xl {
   width: 16rem;
-  height: 12rem;
+  /* height: 12rem; */
 }
 
 .next-languages--size-2xl {
   width: 24rem;
-  height: 18rem;
+  /* height: 18rem; */
 }
 
 .next-languages--size-3xl {
   width: 32rem;
-  height: 24rem;
+  /* height: 24rem; */
 }
 
 .next-languages--size-4xl {
   width: 40rem;
-  height: 30rem;
+  /* height: 30rem; */
 }
 
 .next-languages--size-5xl {
   width: 48rem;
-  height: 36rem;
+  /* height: 36rem; */
 }
 
 .next-languages--size-full {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .next-languages--shadow-sm {
@@ -155,7 +155,7 @@
   overflow: hidden;
 }
 
-.next-languages--border-radius-full {
+.next-languages--border-radius-circular {
   border-radius: 50%;
   overflow: hidden;
 }

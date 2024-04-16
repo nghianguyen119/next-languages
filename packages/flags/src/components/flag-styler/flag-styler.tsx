@@ -43,7 +43,7 @@ export const flagVariants = cva("", {
       "5xl": "next-languages--border-radius-5xl",
       "6xl": "next-languages--border-radius-6xl",
       "7xl": "next-languages--border-radius-7xl",
-      full: "next-languages--border-radius-full",
+      circular: "next-languages--border-radius-circular",
     },
     gradient: {
       none: "",
@@ -63,7 +63,7 @@ export const flagVariants = cva("", {
     },
   },
   defaultVariants: {
-    size: "none",
+    size: "md",
     shadow: "none",
     gradient: "none",
     border: "none",

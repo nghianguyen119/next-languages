@@ -16,8 +16,6 @@ const SvgFr = ({
   gradient,
   border,
   borderRadius,
-  width = 32,
-  height = 24,
   ...props
 }: FlagProps) => (
   <FlagStyler
@@ -29,12 +27,10 @@ const SvgFr = ({
     borderRadius={borderRadius}
   >
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 32 24"
-      width={size ? "100%" : width}
-      height={size ? "100%" : height}
+      viewBox={borderRadius === "circular" ? "4 0 24 24" : "0 0 32 24"}
+      {...props}
     >
       <mask
         id="FR_svg__a"
