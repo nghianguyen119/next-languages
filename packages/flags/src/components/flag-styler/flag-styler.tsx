@@ -19,25 +19,39 @@ export const flagVariants = cva("", {
       "3xl": "next-languages--size-3xl",
       "4xl": "next-languages--size-4xl",
       "5xl": "next-languages--size-5xl",
-      "6xl": "next-languages--size-6xl",
+      full: "next-languages--size-full",
     },
-    dropShadow: {
+    shadow: {
       none: "",
-      sm: "shadow-sm",
-      md: "shadow-md",
-      lg: "shadow-lg",
-      xl: "shadow-xl",
-      "2xl": "shadow-2xl",
-      "3xl": "shadow-3xl",
-      "4xl": "shadow-4xl",
-      "5xl": "shadow-5xl",
-      "6xl": "shadow-6xl",
+      sm: "next-languages--shadow-sm",
+      default: "next-languages--shadow-default",
+      md: "next-languages--shadow-md",
+      lg: "next-languages--shadow-lg",
+      xl: "next-languages--shadow-xl",
+      "2xl": "next-languages--shadow-2xl",
+    },
+    borderRadius: {
+      none: "",
+      sm: "next-languages--border-radius-sm",
+      default: "next-languages--border-radius-default",
+      md: "next-languages--border-radius-md",
+      lg: "next-languages--border-radius-lg",
+      xl: "next-languages--border-radius-xl",
+      "2xl": "next-languages--border-radius-2xl",
+      "3xl": "next-languages--border-radius-3xl",
+      "4xl": "next-languages--border-radius-4xl",
+      "5xl": "next-languages--border-radius-5xl",
+      "6xl": "next-languages--border-radius-6xl",
+      "7xl": "next-languages--border-radius-7xl",
+      full: "next-languages--border-radius-full",
     },
     gradient: {
       none: "",
-      "top-down": "gradient-primary",
-      "real-linear": "gradient-secondary",
-      "real-circular": "gradient-accent",
+      "top-down": "next-languages--gradient next-languages--gradient-top-down",
+      "real-linear":
+        "next-languages--gradient next-languages--gradient-real-linear",
+      "real-circular":
+        "next-languages--gradient next-languages--gradient-real-circular",
     },
     border: {
       none: "",
@@ -49,10 +63,11 @@ export const flagVariants = cva("", {
     },
   },
   defaultVariants: {
-    size: "md",
-    dropShadow: "none",
+    size: "none",
+    shadow: "none",
     gradient: "none",
     border: "none",
+    borderRadius: "none",
   },
 });
 
@@ -65,17 +80,19 @@ export function FlagStyler({
   children,
   className,
   size,
-  dropShadow,
+  shadow,
   gradient,
   border,
+  borderRadius,
 }: FlagStylerProps): JSX.Element {
   return (
     <div
       className={flagVariants({
         size,
-        dropShadow,
+        shadow,
         gradient,
         border,
+        borderRadius,
         className,
       })}
     >

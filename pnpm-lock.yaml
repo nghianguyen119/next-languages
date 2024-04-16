@@ -66,6 +66,9 @@ importers:
 
   apps/test:
     dependencies:
+      '@next-languages/flags':
+        specifier: workspace:^
+        version: link:../../packages/flags
       next:
         specifier: 14.2.1
         version: 14.2.1(react-dom@18.2.0)(react@18.2.0)

@@ -12,22 +12,29 @@ interface FlagProps
 const SvgFr = ({
   className,
   size,
-  dropShadow,
+  shadow,
   gradient,
   border,
+  borderRadius,
+  width = 32,
+  height = 24,
   ...props
 }: FlagProps) => (
   <FlagStyler
     className={className}
     size={size}
-    dropShadow={dropShadow}
+    shadow={shadow}
     gradient={gradient}
+    border={border}
+    borderRadius={borderRadius}
   >
     <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 32 24"
+      width={size ? "100%" : width}
+      height={size ? "100%" : height}
     >
       <mask
         id="FR_svg__a"
