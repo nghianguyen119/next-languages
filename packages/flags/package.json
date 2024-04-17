@@ -1,14 +1,14 @@
 {
   "name": "@next-languages/flags",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "A simple react component to display flags for different languages",
   "author": "github/nghianguyen119",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/nghianguyen119/next-languages"
   },
-  "homepage": "",
+  "homepage": "https://github.com/nghianguyen119/next-languages",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "exports": {
@@ -35,6 +35,9 @@
       "require": "./dist/cjs/style.css"
     }
   },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "engines": {
     "node": ">=16"
@@ -46,6 +49,11 @@
     "lint": "echo 'Add lint script here'",
     "post-process-svg": "tsx ./scripts/post-process-svg.ts",
     "svg-to-tsx": "svgr assets/flags --config-file .svgrrc"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16",
+    "class-variance-authority": "^0.7.0"
   },
   "devDependencies": {
     "@next-languages/eslint-config": "workspace:*",
@@ -61,7 +69,6 @@
     "@types/react-dom": "^18.2.19",
     "cheerio": "1.0.0-rc.12",
     "class-variance-authority": "^0.7.0",
-    "clsx": "~2.1.0",
     "eslint": "^8.57.0",
     "node-sass": "^9.0.0",
     "postcss-scss": "^4.0.9",

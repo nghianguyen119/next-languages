@@ -4,8 +4,8 @@ import { FlagStyler, flagVariants } from "../flag-styler";
 import { type VariantProps } from "class-variance-authority";
 
 interface FlagProps
-  extends VariantProps<typeof flagVariants>,
-    SVGProps<SVGSVGElement> {
+  extends SVGProps<SVGSVGElement>,
+    VariantProps<typeof flagVariants> {
   className?: string;
 }
 
