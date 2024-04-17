@@ -23,11 +23,11 @@
     },
     "./*.js": {
       "import": {
-        "types": "./dist/esm/types/flags/*.d.ts",
-        "default": "./dist/esm/flags/*.js"
+        "types": "./dist/esm/types/components/flags/flagpack/*.d.ts",
+        "default": "./dist/esm/components/flags/flagpack/*.js"
       },
       "require": {
-        "default": "./dist/cjs/flags/*.js"
+        "default": "./dist/cjs/components/flags/flagpack/*.js"
       }
     },
     "./style.css": {
@@ -43,19 +43,16 @@
     "node": ">=16"
   },
   "scripts": {
-    "dev": "echo 'Add dev script here'",
     "build": "rimraf dist && rollup --config",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'",
-    "post-process-svg": "tsx ./scripts/post-process-svg.ts",
-    "svg-to-tsx": "svgr assets/flags --config-file .svgrrc"
+    "generate": "tsx ./scripts/generate-flag-components.ts"
   },
   "peerDependencies": {
+    "class-variance-authority": "^0.7.0",
     "react": ">=16",
-    "react-dom": ">=16",
-    "class-variance-authority": "^0.7.0"
+    "react-dom": ">=16"
   },
   "devDependencies": {
+    "@babel/traverse": "^7.24.1",
     "@next-languages/eslint-config": "workspace:*",
     "@next-languages/typescript-config": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -63,17 +60,23 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@rollup/plugin-url": "^8.0.2",
     "@svgr/cli": "^8.1.0",
+    "@svgr/core": "^8.1.0",
+    "@types/babel__generator": "^7.6.8",
+    "@types/babel__traverse": "^7.20.5",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@types/svg-parser": "^2.0.6",
     "cheerio": "1.0.0-rc.12",
     "class-variance-authority": "^0.7.0",
     "eslint": "^8.57.0",
     "node-sass": "^9.0.0",
     "postcss-scss": "^4.0.9",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-parse": "^9.0.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.14.2",
     "rollup-plugin-dts": "^6.1.0",
@@ -81,8 +84,17 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.75.0",
+    "svg-parser": "^2.0.4",
     "tslib": "^2.6.2",
     "tsx": "^4.7.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "unified": "^11.0.4"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.24.4",
+    "@babel/parser": "^7.24.4",
+    "@babel/types": "^7.24.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0"
   }
 }
