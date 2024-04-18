@@ -1,6 +1,6 @@
 {
   "name": "@next-languages/flags",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A simple react component to display flags for different languages",
   "author": "github/nghianguyen119",
   "license": "MIT",
