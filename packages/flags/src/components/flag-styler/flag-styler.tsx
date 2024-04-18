@@ -52,8 +52,6 @@ export const flagVariants = cva("", {
         "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-real-linear",
       "top-down":
         "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-top-down",
-      "real-circular":
-        "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-real-circular",
       one: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-blue-purple",
       two: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-red-yellow",
       tree: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-green-blue",

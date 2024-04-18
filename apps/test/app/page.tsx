@@ -36,7 +36,7 @@ export default function Home() {
       <Vnm size="sm" borderRadius="xl" />
       {countryCodeList.map((country: any) => (
         <Flag
-          gradient="four"
+          gradient="real-linear"
           size="xl"
           borderRadius="xl"
           countryCode={country.alpha3 || ""}
