@@ -23,11 +23,11 @@
     },
     "./*.js": {
       "import": {
-        "types": "./dist/esm/types/components/flags/flagpack/*.d.ts",
-        "default": "./dist/esm/components/flags/flagpack/*.js"
+        "types": "./dist/esm/types/components/flags/default/*.d.ts",
+        "default": "./dist/esm/components/flags/default/*.js"
       },
       "require": {
-        "default": "./dist/cjs/components/flags/flagpack/*.js"
+        "default": "./dist/cjs/components/flags/default/*.js"
       }
     },
     "./style.css": {

@@ -1,6 +1,4 @@
-export function svgxToComponent(svgx: string, fileName: string) {
-  const componentName = fileName;
-
+export function svgxToComponent(svgx: string, componentName: string) {
   const viewBoxRegex = /viewBox="([^"]*)"/;
   const match = svgx.match(viewBoxRegex);
   if (match) {

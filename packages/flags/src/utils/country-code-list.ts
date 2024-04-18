@@ -16,7 +16,6 @@ export const countryCodeList: IFlagEntry[] = [
     alpha3: "ARE",
     numeric: "784",
   },
-  { countryName: "African Union", alpha2: "AFRUN" },
   {
     countryName: "Antigua and Barbuda",
     alpha2: "AG",
@@ -26,7 +25,6 @@ export const countryCodeList: IFlagEntry[] = [
   { countryName: "Anguilla", alpha2: "AI", alpha3: "AIA", numeric: "660" },
   { countryName: "Albania", alpha2: "AL", alpha3: "ALB", numeric: "008" },
   { countryName: "Armenia", alpha2: "AM", alpha3: "ARM", numeric: "051" },
-  { countryName: "Amsterdam", alpha2: "AMS" },
   { countryName: "Angola", alpha2: "AO", alpha3: "AGO", numeric: "024" },
   { countryName: "Antarctica", alpha2: "AQ", alpha3: "ATA", numeric: "010" },
   { countryName: "Argentina", alpha2: "AR", alpha3: "ARG", numeric: "032" },
@@ -226,7 +224,7 @@ export const countryCodeList: IFlagEntry[] = [
   { countryName: "Comoros", alpha2: "KM", alpha3: "COM", numeric: "174" },
   {
     countryName: "Saint Kitts and Nevis",
-    alpha2: "KN-SK",
+    alpha2: "KN",
     alpha3: "KNA",
     numeric: "659",
   },
@@ -367,7 +365,6 @@ export const countryCodeList: IFlagEntry[] = [
   { countryName: "Palau", alpha2: "PW", alpha3: "PLW", numeric: "585" },
   { countryName: "Paraguay", alpha2: "PY", alpha3: "PRY", numeric: "600" },
   { countryName: "Qatar", alpha2: "QA", alpha3: "QAT", numeric: "634" },
-  { countryName: "Rainbow", alpha2: "RAINBOW" },
   { countryName: "Réunion", alpha2: "RE", alpha3: "REU", numeric: "638" },
   { countryName: "Romania", alpha2: "RO", alpha3: "ROU", numeric: "642" },
   { countryName: "Serbia", alpha2: "RS", alpha3: "SRB", numeric: "688" },
@@ -468,7 +465,6 @@ export const countryCodeList: IFlagEntry[] = [
     alpha3: "UMI",
     numeric: "581",
   },
-  { countryName: "Union of South American Nations", alpha2: "UNASUR" },
   {
     countryName: "United States of America",
     alpha2: "US",
@@ -522,7 +518,6 @@ export const countryCodeList: IFlagEntry[] = [
 export type Flags =
   | "AD"
   | "AE"
-  | "AFRUN"
   | "AG"
   | "AI"
   | "AL"

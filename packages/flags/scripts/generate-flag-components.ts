@@ -6,11 +6,15 @@ import { transform } from "@svgr/core";
 import { svgToSvgx as templateSvgToSvgx } from "../src/components/templates/svg-to-svgx";
 import { svgxToComponent as templateSvgxToComponent } from "../src/components/templates/svgx-to-component";
 import * as prettier from "prettier";
+import {
+  constructComponentName,
+  constructNamedExportComponentName,
+} from "../src/utils/name-constructor";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const svgDir = path.join(__dirname, "../assets");
 const svgComponentsDir = path.join(__dirname, "../src/components/flags");
-const styles = ["duolingostyle", "flagpack"];
+const styles = ["duolingo", "default"];
 
 async function main() {
   createPostProcessSvgDir();
@@ -67,6 +71,7 @@ async function processAndWriteSvg(style: string, file: string) {
 
     svgx = svgx.replace(/;$/g, "");
 
+    const componentName = constructComponentName(path.basename(file, ".svg"));
     let fileName = path
       .basename(file, ".svg")
       .toLowerCase()
@@ -76,14 +81,14 @@ async function processAndWriteSvg(style: string, file: string) {
     // only keep alphanumeric characters and format in camel case, the first letter after hyphen is capitalized
     fileName = fileName.replace(/[^a-zA-Z0-9-]/g, "");
 
-    const tsxComponent = templateSvgxToComponent(svgx, fileName);
+    const tsxComponent = templateSvgxToComponent(svgx, componentName);
     const formatedTsxComponent = await prettier.format(tsxComponent, {
       semi: false,
       parser: "babel-ts",
     });
 
     fs.writeFile(
-      path.join(svgComponentsDir, style, `${fileName}.tsx`),
+      path.join(svgComponentsDir, style, `${componentName}.tsx`),
       formatedTsxComponent,
       "utf8",
       (err) => {
@@ -94,7 +99,7 @@ async function processAndWriteSvg(style: string, file: string) {
 
         fs.appendFile(
           indexFilePath,
-          `export { default as ${style.charAt(0).toUpperCase() + style.slice(1)}${fileName} } from './${fileName}';\n`,
+          `export { default as ${constructNamedExportComponentName(style, path.basename(file, ".svg"))} } from './${componentName}';\n`,
           "utf8",
           (err) => {
             if (err) {

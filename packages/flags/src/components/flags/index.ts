@@ -1,2 +1,2 @@
-export * from './duolingostyle';
-export * from './flagpack';
+export * from './duolingo';
+export * from './default';
