@@ -12,9 +12,9 @@ import Vnm from "@next-languages/flags/Vn.js";
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full items-center justify-around flex-wrap">
-      <DuolingoUs size="xs" borderRadius="md" />
+      <DuolingoUs size="lg" borderRadius="4xl" />
       <DuolingoFr size="sm" borderRadius="lg" />
-      <Us size="xl" borderRadius="lg" gradient="real-linear" />
+      <Us size="xl" borderRadius="lg" gradient="top-top" />
       <Fr size="lg" borderRadius="2xl" gradient="real-linear" />
       <Vn size="md" borderRadius="circular" gradient="real-linear" />
       <Us size="sm" borderRadius="circular" gradient="real-linear" />
@@ -36,7 +36,7 @@ export default function Home() {
       <Vnm size="sm" borderRadius="xl" />
       {countryCodeList.map((country: any) => (
         <Flag
-          gradient="real-linear"
+          gradient="four"
           size="xl"
           borderRadius="xl"
           countryCode={country.alpha3 || ""}

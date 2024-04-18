@@ -26,7 +26,9 @@ export default [
     ],
     plugins: [
       postcss({
-        plugins: [],
+        config: {
+          path: "./postcss.config.cjs",
+        },
         minimize: true,
         extract: "style.css",
         modules: false, // LEARN: set to true will create the css with random name while the css in the component is original name?

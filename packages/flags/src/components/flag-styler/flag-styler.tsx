@@ -1,57 +1,63 @@
 import * as React from "react";
-import "./style.css";
 import { cva, type VariantProps } from "class-variance-authority";
+import "../../index.css";
+import { cn } from "../../utils/utils";
 
 export const flagVariants = cva("", {
   variants: {
     size: {
       none: "",
-      "5xs": "next-languages--size-5xs",
-      "4xs": "next-languages--size-4xs",
-      "3xs": "next-languages--size-3xs",
-      "2xs": "next-languages--size-2xs",
-      xs: "next-languages--size-xs",
-      sm: "next-languages--size-sm",
-      md: "next-languages--size-md",
-      lg: "next-languages--size-lg",
-      xl: "next-languages--size-xl",
-      "2xl": "next-languages--size-2xl",
-      "3xl": "next-languages--size-3xl",
-      "4xl": "next-languages--size-4xl",
-      "5xl": "next-languages--size-5xl",
-      full: "next-languages--size-full",
+      "5xs": "w-4",
+      "4xs": "w-6",
+      "3xs": "w-9",
+      "2xs": "w-12",
+      xs: "w-16",
+      sm: "w-24",
+      md: "w-32",
+      lg: "w-48",
+      xl: "w-64",
+      "2xl": "w-96",
+      "3xl": "w-[32rem]",
+      "4xl": "w-[40rem]",
+      "5xl": "w-[48rem]",
+      full: "w-full",
     },
     shadow: {
       none: "",
-      sm: "next-languages--shadow-sm",
-      default: "next-languages--shadow-default",
-      md: "next-languages--shadow-md",
-      lg: "next-languages--shadow-lg",
-      xl: "next-languages--shadow-xl",
-      "2xl": "next-languages--shadow-2xl",
+      sm: "shadow-sm",
+      default: "shadow",
+      md: "shadow-md",
+      lg: "shadow-lg",
+      xl: "shadow-xl",
+      "2xl": "shadow-2xl",
     },
     borderRadius: {
       none: "",
-      sm: "next-languages--border-radius-sm",
-      default: "next-languages--border-radius-default",
-      md: "next-languages--border-radius-md",
-      lg: "next-languages--border-radius-lg",
-      xl: "next-languages--border-radius-xl",
-      "2xl": "next-languages--border-radius-2xl",
-      "3xl": "next-languages--border-radius-3xl",
-      "4xl": "next-languages--border-radius-4xl",
-      "5xl": "next-languages--border-radius-5xl",
-      "6xl": "next-languages--border-radius-6xl",
-      "7xl": "next-languages--border-radius-7xl",
-      circular: "next-languages--border-radius-circular",
+      sm: "rouded-sm overflow-hidden",
+      default: "rounded overflow-hidden",
+      md: "rounded-md overflow-hidden",
+      lg: "rounded-lg overflow-hidden",
+      xl: "rounded-xl overflow-hidden",
+      "2xl": "rounded-2xl overflow-hidden",
+      "3xl": "rounded-3xl overflow-hidden",
+      "4xl": "rounded-[2rem] overflow-hidden",
+      "5xl": "rounded-[3rem] overflow-hidden",
+      "6xl": "rounded-[4rem] overflow-hidden",
+      "7xl": "rounded-[6rem] overflow-hidden",
+      circular: "rounded-full overflow-hidden",
     },
     gradient: {
       none: "",
-      "top-down": "next-languages--gradient next-languages--gradient-top-down",
       "real-linear":
-        "next-languages--gradient next-languages--gradient-real-linear",
+        "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-real-linear",
+      "top-down":
+        "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-top-down",
       "real-circular":
-        "next-languages--gradient next-languages--gradient-real-circular",
+        "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-real-circular",
+      one: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-blue-purple",
+      two: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-red-yellow",
+      tree: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-green-blue",
+      four: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-dark-light",
     },
     border: {
       none: "",
@@ -87,14 +93,16 @@ export function FlagStyler({
 }: FlagStylerProps): JSX.Element {
   return (
     <div
-      className={flagVariants({
-        size,
-        shadow,
-        gradient,
-        border,
-        borderRadius,
-        className,
-      })}
+      className={cn(
+        flagVariants({
+          size,
+          shadow,
+          gradient,
+          border,
+          borderRadius,
+          className,
+        })
+      )}
     >
       {children}
     </div>
