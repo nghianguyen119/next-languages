@@ -8,6 +8,12 @@ The package provides a collection of flag components that can be used to represe
 
 The package also includes a CSS file that provides the necessary styles for the flag components. This approach, as opposed to using styled components, ensures that the server-side components maintain their intended appearance during server-side rendering. This makes it easy to add beautiful, responsive flags to your internationalized website without compromising on performance or consistency.
 
+# Flag Creation Process
+
+- The SVGs for the flags are gathered from MIT licensed projects such as Flagpack, or from resources like https://flagicons.lipis.dev/.
+- The flags are then optimized using SVGO. This step removes any redundant elements and minimizes the file size of each flag. The optimized SVGs are then converted into TSX format.
+- Finally, Rollup is used to bundle the flags, making them accessible for both CommonJS (cjs) and ECMAScript Module (esm) formats.
+
 ## Setup
 
 Here are the steps to add the `@next-languages/flags` package to your project. You can use the package manager of your choice:
