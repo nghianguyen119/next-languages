@@ -1,4 +1,4 @@
-import React, { SVGProps, Suspense, lazy } from "react";
+import React, { SVGProps, lazy } from "react";
 import { VariantProps } from "class-variance-authority";
 import { flagVariants } from "../flag-styler";
 import { countryCodeList } from "../../utils/country-code-list";
@@ -25,13 +25,5 @@ export default function Flag({ countryCode, ...props }: FlagProps) {
   const componentName = constructComponentName(country.alpha2);
 
   const ImportedFlag = lazy(() => import(`../flags/default/${componentName}`));
-  return (
-    <Suspense fallback={<Loading />}>
-      <ImportedFlag {...props} />
-    </Suspense>
-  );
-}
-
-function Loading() {
-  return <div>...</div>;
+  return <ImportedFlag {...props} />;
 }

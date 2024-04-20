@@ -27,7 +27,7 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.51.3)
       '@next-languages/flags':
-        specifier: 0.3.0
+        specifier: 0.3.2
         version: link:../../packages/flags
       '@radix-ui/react-accordion':
         specifier: ^1.1.2

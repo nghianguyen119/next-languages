@@ -31,6 +31,14 @@ export const flagVariants = cva("", {
       xl: "shadow-xl",
       "2xl": "shadow-2xl",
     },
+    border: {
+      none: "",
+      "1": "border",
+      "2": "border-2",
+      "3": "border-3",
+      "4": "border-4",
+      "5": "border-5",
+    },
     borderRadius: {
       none: "",
       sm: "rouded-sm overflow-hidden",
@@ -56,14 +64,6 @@ export const flagVariants = cva("", {
       two: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-red-yellow",
       tree: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-green-blue",
       four: "relative before:w-full before:h-full before:absolute before:block before:mix-blend-overlay before:box-border before:bg-gradient-dark-light",
-    },
-    border: {
-      none: "",
-      "1": "border",
-      "2": "border-2",
-      "3": "border-3",
-      "4": "border-4",
-      "5": "border-5",
     },
   },
   defaultVariants: {
