@@ -10,7 +10,7 @@ export function FlagsBlock() {
       <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
         <Suspense fallback={<div>...</div>}>
           {countryCodeList.map((countryCode) => (
-            <FlagBlock countryCode={countryCode} />
+            <FlagBlock key={countryCode.alpha2} countryCode={countryCode} />
           ))}
         </Suspense>
       </div>
