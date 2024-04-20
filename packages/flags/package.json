@@ -1,6 +1,6 @@
 {
   "name": "@next-languages/flags",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "A simple react component to display flags for different languages",
   "author": "github/nghianguyen119",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/nghianguyen119/next-languages"
   },
-  "homepage": "https://github.com/nghianguyen119/next-languages",
+  "homepage": "https://next-flags-iota.vercel.app",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "exports": {

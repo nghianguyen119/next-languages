@@ -1,33 +1,55 @@
-# Next Languages
+# Live Demo
 
-Next Languages is a collection of packages designed to aid web developers in internationalizing their websites. These packages are specifically tailored for React and Next.js ecosystems, but they can also be used in other contexts.
+You can see the package in action at [this link](https://next-flags-iota.vercel.app/).
 
-## Features
+# Next Languages Flags
 
-- Modern Flags: An exhaustive collection of contemporary flags for every country, organized by either IETF language code, ISO 639-x or country code.
-- Language Negotiator: A tool to help determine the user's preferred language.
-- Country Codes: A toolkit for developers, providing a catalog of country codes universally recognized by leading search engines.
-- ... Stay tuned for more updates
+The package provides a collection of flag components that can be used to represent different countries. It offers two ways to import flags: you can either import a specific flag component (like the French flag with `Fr`), or you can import a dynamic `Flag` component that accepts a country code as a prop. The country code can be an alpha-2, alpha-3, or numeric country code.
 
-## Installation
+The package also includes a CSS file that provides the necessary styles for the flag components. This approach, as opposed to using styled components, ensures that the server-side components maintain their intended appearance during server-side rendering. This makes it easy to add beautiful, responsive flags to your internationalized website without compromising on performance or consistency.
 
-Provide instructions on how to install your packages here.
+## Setup
 
-## Usage
+Here are the steps to add the `@next-languages/flags` package to your project. You can use the package manager of your choice:
 
-Provide instructions on how to use your packages here.
+- For `pnpm`, use the command: `pnpm add @next-languages/flags`
+- For `npm`, use the command: `npm install @next-languages/flags`
+- For `yarn`, use the command: `yarn add @next-languages/flags`
 
-## Contributing
+## How to Use
 
-If you're interested in contributing to the development of Next Languages, please read our contributing guidelines.
+First, import the CSS file:
 
-## License
+```javascript
+import "@next-languages/flags/style.css";
+```
 
-Next Languages is licensed under the [MIT License](LICENSE).
+You have two options for importing flags:
 
-## Special Thanks
+1. Importing a Specific Flag: If you need a specific flag, it's recommended to import it directly. For instance, to import the flag of France, you would use the corresponding alpha-2 country code from [this list](https://www.iban.com/country-codes). In our package, the country codes are capitalized only at the first letter. So, for France, the import statement would be:
 
-We would like to extend our special thanks to the following:
+```javascript
+import { Fr } from "@next-languages/flags";
+```
 
-- [MUI/icons-material](https://mui.com/components/material-icons/): We used this library as a standard to organize our project.
-- [Flagpack](https://www.flagpack.xyz/): They provided the base for us to develop our flag collection.
+You can then use it in your component like so:
+
+```javascript
+<Fr />
+```
+
+2. Import a dynamic flag: This allows you to set the flag based on a country code. First, import the necessary components:
+
+```javascript
+import { countryCodeList, Flag, IFlagEntry } from "@next-languages/flags";
+```
+
+Then, use the Flag component in your code. The countryCode prop can be an alpha-2, alpha-3, or numeric country code. For example:
+
+```javascript
+<Suspense fallback={<div>...</div>}>
+  <Flag countryCode={countryCode.alpha2} />
+</Suspense>
+```
+
+In this example, the `Suspense` component is used to prevent infinite rendering while the `Flag` component is loading. By providing a fallback UI, `Suspense` ensures that the component rendering is controlled and doesn't lead to an infinite loop. For more information, refer to these discussions on [StackOverflow](https://stackoverflow.com/questions/71594952/react-18-infinite-rendering-when-passing-a-state-variable-for-lazy-loading) and [GitHub](https://github.com/facebook/react/issues/24534).

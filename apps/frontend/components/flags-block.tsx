@@ -1,5 +1,4 @@
-import { countryCodeList, Flag, Vi, IFlagEntry } from "@next-languages/flags";
-import { useSearchParams } from "next/navigation";
+import { countryCodeList, Flag, IFlagEntry } from "@next-languages/flags";
 import { Separator } from "@/components/ui/separator";
 import { MessageCircleQuestion } from "lucide-react";
 import { Suspense } from "react";
