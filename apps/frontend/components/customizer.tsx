@@ -126,12 +126,6 @@ export function Customizer() {
           </div>
         </form>
       </CardContent>
-      <CardFooter className="flex justify-between gap-2 flex-wrap">
-        <Button className="grow" variant="outline">
-          Cancel
-        </Button>
-        <Button className="grow">Deploy</Button>
-      </CardFooter>
     </Card>
   );
 }
